@@ -16,7 +16,7 @@ const ForgotPassword = () => {
 
     const templateParams = {
     email: email, 
-    link: `https://saidbo03.github.io/reset-password?email=${email}`
+    link: `https://saidbo03.github.io/login/reset-password?email=${email}`
     };
 
     // 2. إرسال الإيميل عبر EmailJS
