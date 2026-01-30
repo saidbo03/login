@@ -1,5 +1,5 @@
 import React ,{ useState }from 'react'
-import { BrowserRouter,Link,Routes,Route } from 'react-router-dom'
+import { HashRouter,Link,Routes,Route } from 'react-router-dom'
 
 import './App.css'
 import Home from './home'
@@ -17,7 +17,7 @@ function App() {
   
   return (
     <div>
-      <BrowserRouter basename="/login">
+      <HashRouter >
         <Routes>
           <Route path='/' element={<Home user={user}/>}/>
           <Route path='/logIn' element={<LoginForm user={user} setUser={setUser}/>}/>
@@ -26,7 +26,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword user={user} />} />
           <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
