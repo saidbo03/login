@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/login/',
   plugins: [
     react({
-      base: '/login/',
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
