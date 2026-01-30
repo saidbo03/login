@@ -30,8 +30,9 @@ const LoginForm = ({user,setUser}) => {
       return;
     }
 
-    console.log("بيانات تسجيل الدخول المرسلة:", formData);
+    
     if(formData.email === user.email && formData.password === user.password){
+      console.log("بيانات تسجيل الدخول المرسلة:", formData);
        const DataUser={
         email:user.email,
         name:user.username,
@@ -43,6 +44,8 @@ const LoginForm = ({user,setUser}) => {
 
       // تحويل لصفحة home
       navigate("/");
+    }else{
+      console.log("بيانات فيها مشكل ");
     }
   };
   

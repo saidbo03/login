@@ -24,7 +24,7 @@ function App() {
           <Route path='/logOut' element={<LogOutForm user={user} setUser={setUser}/>}/>
           <Route path='/signUp' element={<SignUpForm setUser={setUser}/>}/>
           <Route path="/forgot-password" element={<ForgotPassword user={user} />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/reset-password" element={<ResetPassword setUser={setUser}/>} />
         </Routes>
       </HashRouter>
     </div>

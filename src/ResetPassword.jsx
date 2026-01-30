@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
-const ResetPassword = () => {
+const ResetPassword = ({setUser}) => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   
@@ -38,7 +38,13 @@ const ResetPassword = () => {
       if (user.email === emailFromUrl) {
         user.password = passwords.newPassword; // تحديث كلمة المرور
         localStorage.setItem('user', JSON.stringify(user));
-        
+        const DataUser={
+          email:user.email,
+          name:user.username,
+          password:user.password,
+          isLogin:true
+        }
+        setUser(DataUser)
         setSuccess(true);
         setTimeout(() => navigate('/logIn'), 3000); // التوجيه لصفحة الدخول بعد 3 ثوانٍ
       } else {
