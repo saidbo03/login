@@ -12,12 +12,11 @@ const ForgotPassword = () => {
     setLoading(true);
     setStatus({ type: '', msg: '' });
 
-    // 1. إعداد البيانات لتطابق القالب في صورتك (email و link)
-    const currentOrigin = window.location.origin;
+    
 
     const templateParams = {
     email: email, 
-    link: `${currentOrigin}/reset-password?email=${email}`
+    link: `https://saidbo03.github.io/reset-password?email=${email}`
     };
 
     // 2. إرسال الإيميل عبر EmailJS

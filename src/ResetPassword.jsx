@@ -40,7 +40,7 @@ const ResetPassword = () => {
         localStorage.setItem('user', JSON.stringify(user));
         
         setSuccess(true);
-        setTimeout(() => navigate('/login'), 3000); // التوجيه لصفحة الدخول بعد 3 ثوانٍ
+        setTimeout(() => navigate('/logIn'), 3000); // التوجيه لصفحة الدخول بعد 3 ثوانٍ
       } else {
         setError("خطأ في التحقق من الحساب.");
       }

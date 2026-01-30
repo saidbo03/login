@@ -17,7 +17,7 @@ function App() {
   
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/login">
         <Routes>
           <Route path='/' element={<Home user={user}/>}/>
           <Route path='/logIn' element={<LoginForm user={user} setUser={setUser}/>}/>
